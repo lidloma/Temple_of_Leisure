@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOL - Sobre nosotros</title>        
+    <link rel="stylesheet" type="text/css" href="css/estiloSobreNosotros.css">
+    <link rel="stylesheet" type="text/css" href="css/estiloCabecera.css">
+    <link rel="stylesheet" type="text/css" href="css/estiloFooter.css">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+    <!--Iconos-->
+    <!-- Menú hamburguesa de Font Awesome-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+    <!--Google Icons-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+   
+
+    <!--Google Fonts-->
+    <!-- Fuente de Temple of Leisure - Reggae One-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&family=Reggae+One&display=swap" rel="stylesheet">
+
+    <!--Be Vietnam-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Revolution&family=Reggae+One&display=swap" rel="stylesheet">
+
+    <!--Poppins-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Revolution&family=Reggae+One&display=swap" rel="stylesheet">
+    
+  
+</head>
+<body>
+    <div id="header">
+        <header>
+            <a href="inicio.html">
+            <img src="img/logotipo.png">
+            <h1>TEMPLE OF LEISURE</h1> 
+            </a>    
+        </header>
+        <nav>
+            <ul>
+                <li><a href="buscar.html">Películas</a></li>
+                <li><a href="buscarSerie.html">Series</a></li>
+                <li><a href="buscarLibros.html">Libros</a></li>
+                <li><a href="buscarVideojuegos.html">Videojuegos</a></li>
+                <li><a href="buscarComic.html">Cómics</a></li>
+            
+                <li id="sobre-nosotros"><a href="error404.html">Sobre Nosotros</a>
+                    <ul class="submenu">
+                        <li class="esconder"><a href="contacto.html">Contacto</a></li>
+                        <li class="esconder"><a href="sobreNosotros.html">¿Quiénes somos?</a></li>
+                    </ul>
+                </li>
+                <li id="buscador"><a class="esconder"><span class="material-symbols-outlined">
+                    search
+                    </span></a>
+                    <ul class="submenu">
+                        <li class="esconder"><input placeholder="Buscar..."></li>
+                    </ul>
+                </li>
+                <li><a id="perfil" class="esconder"><span class="material-symbols-outlined">
+                    account_circle
+                    </span></a></li>
+            </ul>
+        </nav>
+        <div class="hide">
+            <i class="fa fa-bars" id="menu" aria-hidden="true"></i>
+            <ul id="perfilYBuscador">
+                <li id="buscador"><a ><span class="material-symbols-outlined">search</span></a>
+                    <ul class="submenu">
+                        <li><input placeholder="Buscar..."></li>
+                    </ul>
+                </li>
+                <li><a id="perfil" ><span class="material-symbols-outlined">account_circle</span></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Ventana emergente de login -->
+    <div id="modal-login" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img src="img/logotipo.png" alt="Logotipo del sitio">
+            <form>
+                <input placeholder="Usuario"type="text" id="username" name="username" required>
+                <input placeholder="Contraseña" type="password" id="password" name="password" required>
+                <button type="submit">Iniciar sesión</button>
+            </form>
+            <p>¿No tienes una cuenta? <a id="registro-link">Regístrate aquí</a></p>
+            <p>¿Se te ha olvidado la contraseña?</p>
+        </div>
+    </div>
+
+    <!-- Ventana emergente de registro -->
+    <div id="modal-registro" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img src="img/logotipo.png" alt="Logotipo del sitio">
+            <form>
+                <input placeholder="Nombre" type="text" id="nombre" name="nombre" required>
+                
+                <input placeholder="Apellidos" type="text" id="apellidos" name="apellidos" required>
+                
+                <input placeholder="Correo electrónico" type="email" id="correo" name="correo" required>
+                
+                <input placeholder="Nombre de usuario" type="text" id="username-registro" name="username-registro" required>
+                
+                <input placeholder="Contraseña" type="password" id="password-registro" name="password-registro" required>
+                
+                <input placeholder="Confirmar contraseña"type="password" id="confirm-password" name="confirm-password" required>
+                <div class="checkbox">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">Acepto los términos y condiciones</label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <label for="newsletter">Suscribirse a la newsletter</label>
+                </div>
+                <button type="submit">Registrarse</button>
+                <p>¿Ya tienes una cuenta? <a id="login-link">Inicia sesión</a></p>
+            </form>
+        </div>
+    </div>
+
+
+    <section>
+        <div id="titulo">
+            <h2>Acerca de nosotros</h2>
+        </div>
+        <div id="principal">
+            <p>Temple of Leisure, establecido en el año 2023, es un weblog colectivo sin ánimo de lucro dedicado apasionadamente al mundo del entretenimiento. Nos embarcamos en la misión de ofrecer un espacio vibrante donde los aficionados puedan explorar y compartir sus opiniones sobre cómics, videojuegos, libros, películas y series.</p>
+
+
+            <p>Somos un templo dedicado a la diversidad del entretenimiento, con un enfoque que abarca desde las páginas de los cómics hasta los mundos virtuales de los videojuegos, Temple of Leisure celebra la riqueza de experiencias que el entretenimiento tiene para ofrecer.</p>
+                
+                <p>Contenido destacado: </p>
+                <ul>
+                    <li>Reseñas y Críticas: Exploramos a fondo cómics, videojuegos, libros, películas y series, ofreciendo análisis detallados y opiniones honestas.</li>
+                    <li>Explorando Universos Literarios: Adéntrate en las páginas de libros de diversas categorías y géneros.</li>
+                    <li>Desafiando Niveles Virtuales: Sumérgete en el mundo de los videojuegos, desde los clásicos hasta las últimas novedades.</li>
+                    <li>Viaje Cinematográfico: Descubre reseñas y críticas de películas que van desde lo clásico hasta lo contemporáneo.</li>
+                    <li>Episodios que Enganchan: Analizamos series de televisión, desde los éxitos de culto hasta las últimas tendencias.</li>
+                </ul>
+                
+                <p>Te animamos a que nos sigas en nuestras redes sociales: </p>
+        </div>
+        <div id="redes">
+            <img src="img/insta.png">
+            <img src="img/twitter.png">
+            <img src="img/tiktok.png">
+            <img src="img/youtube.png">
+        </div>
+        <img id="logotipo" src="img/logotipo.png" alt="Logotipo">
+        <div class="secciones">
+            <h2>Nuestro equipo</h2>
+            <div><hr></div>
+        </div>
+        <div id="nuestroEquipo">
+            <figure id="infoAutor">
+                <img src="img/perfilAutor.png" alt="Foto del autor del artículo">
+                <div>
+                    <h3>José Ángel Barrena González</h3>
+                    <p>Estudiante de filología inglesa e hispánica en la Universidad de Cádiz...</p>
+                
+                </div>
+            </figure>
+        </div>
+       
+
+    </section>
+    <script src="js/scriptHeader.js"></script>
+
+    <footer>
+        <div class="elementosFooter">
+            <div id="logotipo">
+                <img src="img/logotipo.png" alt="Logotipo TOL">
+                <h2>TOL</h2>
+            </div>
+            <p>All content copyright © & Trademarked of their respective owners. All rights reserved.</p>
+        </div>
+        <div class="elementosFooter">
+            <p>Aviso legal</p>
+            <p>Privacidad y cookies</p>
+            <p>Condiciones generales</p>
+        </div>
+        <div class="elementosFooter">
+            <p>templeofleisure@gmail.com</p>
+            <p>Contacta</p>
+            <p>Síguenos</p>
+            <div>
+                <img src="img/youtube.png" alt="">
+                <img src="img/insta.png" alt="">
+                <img src="img/twitter.png" alt="">
+                <img src="img/tiktok.png" alt="">
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

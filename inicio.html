@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOL - Inicio</title>        
+    <link rel="stylesheet" type="text/css" href="css/estiloInicio.css">
+    <link rel="stylesheet" type="text/css" href="css/estiloCabecera.css">
+    <link rel="stylesheet" type="text/css" href="css/estiloSlider.css">
+    <link rel="stylesheet" type="text/css" href="css/estiloFooter.css">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+    <!--Iconos-->
+    <!-- Menú hamburguesa de Font Awesome-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+    <!--Google Icons-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+   
+
+    <!--Google Fonts-->
+    <!-- Fuente de Temple of Leisure - Reggae One-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&family=Reggae+One&display=swap" rel="stylesheet">
+
+    <!--Be Vietnam-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Revolution&family=Reggae+One&display=swap" rel="stylesheet">
+
+    <!--Poppins-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Revolution&family=Reggae+One&display=swap" rel="stylesheet">
+    
+    <!-- Carrusel -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+</head>
+<body>
+    <div id="header">
+        <header>
+            <a href="inicio.html">
+            <img src="img/logotipo.png">
+            <h1>TEMPLE OF LEISURE</h1> 
+            </a>    
+        </header>
+        <nav>
+            <ul>
+                <li><a href="buscar.html">Películas</a></li>
+                <li><a href="buscarSerie.html">Series</a></li>
+                <li><a href="buscarLibros.html">Libros</a></li>
+                <li><a href="buscarVideojuegos.html">Videojuegos</a></li>
+                <li><a href="buscarComic.html">Cómics</a></li>
+            
+                <li id="sobre-nosotros"><a href="error404.html">Sobre Nosotros</a>
+                    <ul class="submenu">
+                        <li class="esconder"><a href="contacto.html">Contacto</a></li>
+                        <li class="esconder"><a href="sobreNosotros.html">¿Quiénes somos?</a></li>
+                    </ul>
+                </li>
+                <li id="buscador"><a class="esconder"><span class="material-symbols-outlined">
+                    search
+                    </span></a>
+                    <ul class="submenu">
+                        <li class="esconder"><input placeholder="Buscar..."></li>
+                    </ul>
+                </li>
+                <li><a id="perfil" class="esconder"><span class="material-symbols-outlined">
+                    account_circle
+                    </span></a></li>
+            </ul>
+        </nav>
+        <div class="hide">
+            <i class="fa fa-bars" id="menu" aria-hidden="true"></i>
+            <ul id="perfilYBuscador">
+                <li id="buscador"><a ><span class="material-symbols-outlined">search</span></a>
+                    <ul class="submenu">
+                        <li><input placeholder="Buscar..."></li>
+                    </ul>
+                </li>
+                <li><a id="perfil" ><span class="material-symbols-outlined">account_circle</span></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Ventana emergente de login -->
+    <div id="modal-login" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img src="img/logotipo.png" alt="Logotipo del sitio">
+            <form>
+                <input placeholder="Usuario"type="text" id="username" name="username" required>
+                <input placeholder="Contraseña" type="password" id="password" name="password" required>
+                <button type="submit">Iniciar sesión</button>
+            </form>
+            <p>¿No tienes una cuenta? <a id="registro-link">Regístrate aquí</a></p>
+            <p>¿Se te ha olvidado la contraseña?</p>
+        </div>
+    </div>
+
+    <!-- Ventana emergente de registro -->
+    <div id="modal-registro" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img src="img/logotipo.png" alt="Logotipo del sitio">
+            <form>
+                <input placeholder="Nombre" type="text" id="nombre" name="nombre" required>
+                
+                <input placeholder="Apellidos" type="text" id="apellidos" name="apellidos" required>
+                
+                <input placeholder="Correo electrónico" type="email" id="correo" name="correo" required>
+                
+                <input placeholder="Nombre de usuario" type="text" id="username-registro" name="username-registro" required>
+                
+                <input placeholder="Contraseña" type="password" id="password-registro" name="password-registro" required>
+                
+                <input placeholder="Confirmar contraseña"type="password" id="confirm-password" name="confirm-password" required>
+                <div class="checkbox">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">Acepto los términos y condiciones</label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <label for="newsletter">Suscribirse a la newsletter</label>
+                </div>
+                <button type="submit">Registrarse</button>
+                <p>¿Ya tienes una cuenta? <a id="login-link">Inicia sesión</a></p>
+            </form>
+        </div>
+    </div>
+
+    <section class="contenedorInicio">
+        <span id="modoOscuroBtn" class="material-symbols-outlined">dark_mode</span>
+   
+        <h2>¡Descubre tu próxima obsesión a través de nuestras reseñas!</h2>
+        <div class="swiper mySwiper2">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="img/hazbinHotel.webp" />    
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/django.png" />   
+                </div>
+                <div class="swiper-slide">
+                    <a href="reseña.html"><img src="img/nacidos.png" /></a>
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/eldenRing.jpg" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/onePiece.png" />
+                </div>
+         
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+    <section>
+        <div class="secciones">
+            <h2>Más recientes</h2>
+            <div><hr></div>
+        </div>
+        <div id="masRecientes">
+            <div id="principal">
+                <img src="img/nacidos.png">
+                <div>
+                    <h3>El imperio final</h3>
+                    <p class="autor"><a>José Ángel Barrena</a> - 5 febrero 2024</p>
+                    <p> Durante mil años han caído las cenizas y nada florece. Durante mil años los skaa han 
+                        sido esclavizados y viven sumidos en un miedo inevitable. Durante mil años el Lord 
+                        Legislador reina con un poder absoluto gracias al terror, a sus poderes y a su 
+                        inmortalidad.</p>
+                    <button><a href="reseña.html">Leer más</a></button>
+                </div>
+            </div>
+            <div id="secundario">
+                <div class="secundarioEle">
+                    <img src="img/hazbinHotel.webp">
+                    <div class="elemento">
+                        <h3>Hazbin Hotel</h3>
+                        <p class="autor"><a>José Ángel Barrena</a> - 5 febrero 2024</p>
+                        <p>En un intento de encontrar una alternativa no violenta para reducir la superpoblación 
+                            del infierno, la hija de Lucifer abre un hotel de rehabilitación que ofrece a un grupo 
+                            de demonios inadaptados una oportunidad de redención.</p>
+                        <button>Leer más</button>
+                    </div>
+                </div>
+                <div class="secundarioEle">
+                    <img src="img/greenBook.jpg">
+                    <div class="elemento">
+                        <h3>Green Book</h3>
+                        <p class="autor"><a>José Ángel Barrena</a> - 5 febrero 2024</p>
+                        <p>Años 60. Tony Lip, un rudo italoamericano del Bronx, es contratado como chófer del virtuoso 
+                            pianista negro Don Shirley.</p>
+                        <button>Leer más</button>
+                    </div>
+                </div>
+            </div>
+            <div id="aside">
+                <h3>Tendencias</h3>
+                <hr>
+                <p>1. Scott Pilgrim</p>
+                <hr>
+                <p>2. Alas de sangre</p>
+                <hr>
+                <p>3. Jujutsu Kaisen</p>
+                <hr>
+                <p>4. Wish</p>
+                <hr>
+                <p>5. FNAF</p>
+                <hr>
+                <p>6. GOTY</p>
+                <hr>
+                <a href="https://www.normaeditorial.com/ficha/comic-americano/massiveverse/the-dead-lucky/the-dead-lucky-1-los-buenos-mueren-jovenes"><img alt="anuncio" src="img/anuncioC1.png"></a>
+                <a href="https://www.normaeditorial.com/ficha/comic-europeo/blacksad/blacksad/blacksad-7-todo-cae-segunda-parte"  target="_blank" ><img alt="anuncio" src="img/anuncioC2.png"></a>
+                <a href="https://www.planetadelibros.com/editorial/planeta-comic/54" target="_blank"><img alt="anuncio" src="img/anuncioC3.png"></a>
+                <div id="redes">
+                    <img src="img/twitterSVG.svg" alt="Twitter" class="icono">
+                    <img src="img/instaSVG.svg" alt="Instagram" class="icono">
+                    <img src="img/youtubeSVG.svg" alt="Youtube" class="icono">
+                    <img src="img/tiktokSVG.svg" alt="Tiktok" class="icono">
+                </div> 
+            </div>
+        </div>
+    </section>
+    <section id="articulos">
+        <div class="secciones">
+            <span class="material-symbols-outlined">tv</span>
+            <h2>Series</h2>
+            <div><hr></div>
+        </div>
+        <div class="container">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="img/hazbinHotel.webp">
+                    <div class="descripcion">
+                        <h4>Hazbin Hotel</h4>
+                        <p class="autor"><a>José Ángel Barrena</a> - 5 febrero 2024</p>
+                        <p>El piloto publicado en Youtube en 2019 presenta a Charlie, la hija de Lucifer y princesa 
+                            del infierno, quien persigue su aparentemente imposible objetivo de rehabilitar a los 
+                            demonios, para así pacíficamente reducir la sobrepoblación del infierno.</p>
+                        <button>Leer más</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/breakingBad.jpg">
+                    <div class="descripcion">
+                        <h4>Breaking Bad</h4>
+                        <p class="autor"><a>José Ángel Barrena</a> - 5 febrero 2024</p>
+                        <p>Un profesor de química con cáncer terminal se asocia con un exalumno suyo para fabricar
+                            y vender metanfetamina a fin de que su familia no pase apuros económicos. </p>
+                        <button>Leer más</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/arcane.webp">
+                    <div class="descripcion">
+                        <h4>Arcane</h4>
+                        <p class="autor"><a>José Ángel Barrena</a> - 5 febrero 2024</p>
+                        <p>Mientras la discordia separa las ciudades gemelas de Piltóver y Zaun, dos hermanas se 
+                            enfrentan en una guerra feroz entre tecnologías mágicas y convicciones opuestas. Ve 
+                            todo lo que quieras. Hailee Steinfeld y Kevin Alejandro son las voces en inglés en 
+                            esta serie basada en League of Legends de Riot Games.</p>
+                        <button>Leer más</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/brooklyn99.jpg">
+                    <div class="descripcion">
+                        <h4>Brooklyn 99</h4>
+                        <p class="autor"><a>José Ángel Barrena</a> - 5 febrero 2024</p>
+                        <p>La serie gira en torno a Jake Peralta (Andy Samberg), un talentoso pero inmaduro 
+                            detective del DPNY en la ficticia comisaría 99 de Brooklyn, que a menudo entra en
+                            conflicto con su oficial al mando, el serio y severo capitán Raymond Holt (Andre Braugher).</p>
+                        <button>Leer más</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/theboys.2jpg.jpg">
+                    <div class="descripcion">
+                        <h4>The boys</h4>
+                        <p class="autor"><a>José Ángel Barrena</a> - 5 febrero 2024</p>
+                        <p>Con la intención de detener a los superhéroes corruptos, The Boys, un grupo de 
+                            justicieros, continúa su heroica búsqueda para exponer la verdad sobre The Seven 
+                            y Vought, el conglomerado multimillonario que administra a los superhéroes y encubre 
+                            sus sucios secretos.</p>
+                        <button>Leer más</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/theboys.jpg">
+                    <p class="autor"><a>José Ángel Barrena</a> - 5 febrero 2024</p>
+                    <div class="descripcion">
+                        <p><a>José Ángel Barrena</a> - 5 febrero 2024</p>
+                        <h4></h4>
+                        <p></p>
+                        <button>Leer más</button>
+                    </div>
+                </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+        
+        <div class="secciones">
+            <span class="material-symbols-outlined">movie</span>
+            <h2>Películas</h2>
+            <div><hr></div>
+        </div>
+        <div class="container">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="img/300.jpg">
+                    <div class="descripcion">
+                        <h4>300</h4>
+                        <p class="autor"><a>José Ángel Barrena</a> - 5 febrero 2024</p>
+                        <p>Leonidas, rey de Esparta, y sus 300 guerreros luchan hasta la muerte contra el numeroso ejército persa de Xerxes en la Batalla de las Termópilas.</p>
+                        <button>Leer más</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/django.png">
+                    <div class="descripcion">
+                        <h4>Django</h4>
+                        <p class="autor"><a>José Ángel Barrena</a> - 5 febrero 2024</p>
+                        <p>Un antiguo esclavo une sus fuerzas con un cazador de recompensas alemán que lo libera y ayuda a cazar a los criminales más buscados del Sur, todo ello con la esperanza de encontrar a su esposa perdida hace mucho tiempo.</p>
+                        <button>Leer más</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/greenBook.jpg">
+                    <div class="descripcion">
+                        <h4>Green Book</h4>
+                        <p class="autor"><a>José Ángel Barrena</a> - 5 febrero 2024</p>
+                        <p>Años 60. Tony Lip, un rudo italoamericano del Bronx, es contratado como chófer del virtuoso pianista negro Don Shirley.</p>
+                        <button>Leer más</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/elPadrino.jpg">
+                    <div class="descripcion">
+                        <h4>El padrino</h4>
+                        <p class="autor"><a>José Ángel Barrena</a> - 5 febrero 2024</p>
+                        <p>Don Vito Corleone es el respetado y temido jefe de una de las cinco familias de la mafia de Nueva York en los años 40. El hombre tiene cuatro hijos: Connie, Sonny, Fredo y Michael, que no quiere saber nada de los negocios sucios de su padre.</p>
+                        <button>Leer más</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/nimona.jpeg">
+                    <div class="descripcion">
+                        <h4>Nimona</h4>
+                        <p class="autor"><a>José Ángel Barrena</a> - 5 febrero 2024</p>
+                        <p>Un caballero es incriminado por un crimen que no ha cometido, y la única persona que puede ayudarle a demostrar su inocencia es Nimona, una adolescente que cambia de forma y que también podría ser un monstruo al que ha jurado matar.
+                        </p>
+                        <button>Leer más</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/granTorino.avif">
+                    <div class="descripcion">
+                        <h4>Gran Torino</h4>
+                        <p class="autor"><a>José Ángel Barrena</a> - 5 febrero 2024</p>
+                        <p>Walt Kowalski, un veterano de la guerra de Corea, es un obrero jubilado del sector del automóvil que ha enviudado recientemente. Su máxima pasión es cuidar de su más preciado tesoro: un coche Gran Torino de 1972.</p>
+                        <button>Leer más</button>
+                    </div>
+                </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+
+        <div class="secciones">
+            <span class="material-symbols-outlined">book</span>
+            <h2>Libros</h2>
+            <div><hr></div>
+        </div>
+        <div class="container">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="img/bushido.jpg">
+                    <div class="descripcion">
+                        <h4>Bushido</h4>
+                        <p class="autor"><a>José Ángel Barrena</a> - 5 febrero 2024</p>
+                        <p>Bushido es una guía esencial para comprender la cultura japonesa, pero también para 
+                            aprender los grandes principios que nos enseña el «camino del guerrero», cuyos valores
+                            universales y profundamente éticos pueden encaminar nuestra vida.</p>
+                        <button>Leer más</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/elantris.jpg">
+                    <div class="descripcion">
+                        <h4>Elantris</h4>
+                        <p class="autor"><a>José Ángel Barrena</a> - 5 febrero 2024</p>
+                        <p>La ciudad de Elantris, poderosa y bella capital de Arelon, había sido llamada 
+                            la «ciudad de los dioses ». Antaño famosa sede de inmortales, un lugar repleto 
+                            de poder y magia, Elantris ha caído en desgracia.  </p>
+                        <button>Leer más</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/elSeñorDeLosAnillos.jpg">
+                    <div class="descripcion">
+                        <h4>El señor de los anillos</h4>
+                        <p class="autor"><a>José Ángel Barrena</a> - 5 febrero 2024</p>
+                        <p>En la Tierra Media, el Señor Oscuro Sauron forjó los Grandes Anillos del Poder y 
+                            creó uno con el poder de esclavizar a toda la Tierra Media. Frodo Bolsón es un 
+                            hobbit al que su tío Bilbo hace portador del poderoso Anillo Único con la misión
+                            de destruirlo. </p>
+                        <button>Leer más</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/elPrincipito.webp">
+                    <div class="descripcion">
+                        <h4>El Principito</h4>
+                        <p class="autor"><a>José Ángel Barrena</a> - 5 febrero 2024</p>
+                        <p>El Principito es una narración corta del escritor francés Antoine de Saint-Exupéry. 
+                            La historia se centra en un pequeño príncipe que realiza una travesía por el universo. 
+                            En este viaje descubre la extraña forma en que los adultos ven la vida y comprende el 
+                            valor del amor y la amistad.</p>
+                        <button>Leer más</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/nacidos.jpg">
+                    <div class="descripcion">
+                        <h4>Nacidos de la bruma</h4>
+                        <p class="autor"><a>José Ángel Barrena</a> - 5 febrero 2024</p>
+                        <p>Durante mil años han caído cenizas del cielo. Durante mil años nada ha  
+                            florecido. Durante mil años los skaa han sido esclavizados y viven en 
+                            la  miseria, sumidos en un miedo inevitable. Durante mil años el Lord  
+                            Legislador ha reinado con poder absoluto.</p>
+                        <button><a href="reseña.html">Leer más</a></button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/elNombreDelViento.webp">
+                    <div class="descripcion">
+                        <h4>El nombre del viento</h4>
+                        <p class="autor"><a>José Ángel Barrena</a> - 5 febrero 2024</p>
+                        <p>En una posada en tierra de nadie, un hombre se dispone a relatar, por  primera vez, la auténtica historia de su vida. Kvothe... músico, mendigo, ladrón, estudiante, mago, héroe y asesino.</p>
+                        <button>Leer más</button>
+                    </div>
+                </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+
+        <div class="secciones">
+            <span class="material-symbols-outlined">comic_bubble</span>
+            <h2>Cómics</h2>
+            <div><hr></div>
+        </div>
+        <div class="container">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                <div class="swiper-slide">
+    
+                    <img src="img/capitan.jpg">
+                    <div class="descripcion">
+                        <h4>Capitán Trueno</h4>
+                        <p class="autor"><a>José Ángel Barrena</a> - 5 febrero 2024</p>
+                        <p>El protagonista es el capitán Trueno, un caballero español de la Edad Media en tiempos de 
+                            la Tercera Cruzada. Acompañado por sus amigos Goliath y Crispín.</p>
+                        <button>Leer más</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/onePiece.png">
+                    <div class="descripcion">
+                        <h4>One piece</h4>
+                        <p class="autor"><a>José Ángel Barrena</a> - 5 febrero 2024</p>
+                        <p>One Piece narra la historia de un joven llamado Monkey D. Luffy, 
+                            que inspirado por su amigo pirata Shanks, comienza un viaje para alcanzar su sueño,
+                            ser el Rey de los piratas, para lo cual deberá encontrar el tesoro One Piece.</p>
+                        <button>Leer más</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/punpun.jpg">
+                    <div class="descripcion">
+                        <h4>Buenas noches PunPun</h4>
+                        <p class="autor"><a>José Ángel Barrena</a> - 5 febrero 2024</p>
+                        <p>Punpun es un chico abrumado por su existencia, que se siente tan desconectado 
+                            de todo lo que le rodea y tan impotente para cambiarlo que es incapaz de enfrentarse a su vida.</p>
+                        <button>Leer más</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                    <img src="img/laProfeciaDelArmadillo.jpg">
+                    <div class="descripcion">
+                        <h4>La profecía del armadillo</h4>
+                        <p class="autor"><a>José Ángel Barrena</a> - 5 febrero 2024</p>
+                        <p> El autor y  su conciencia, representada 
+                            por un armadillo gigante, se ven empujados a  una espiral de recuerdos ante la
+                            noticia de la insidiosa muerte de Camille, amiga de la infancia y primer amor de Zero.</p>
+                        <button>Leer más</button>
+                    </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/dandadan.jpg">
+                    <div class="descripcion">
+                        <h4>Dandadan</h4>
+                        <p class="autor"><a>José Ángel Barrena</a> - 5 febrero 2024</p>
+                        <p>Takakura es un joven amante de lo oculto que no cree en fantasmas, mientras que 
+                            su amiga, Ayase, no cree en los alienígenas, pero juntos se toparán con un misterio
+                            que desafiará todas sus creencias y convenciones.</p>
+                        <button>Leer más</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/berserk.png">
+                    <div class="descripcion">
+                        <h4>Berserk</h4>
+                        <p class="autor"><a>José Ángel Barrena</a> - 5 febrero 2024</p>
+                        <p>“Berserk” sigue la historia de Guts, un mercenario y espadachín 
+                            con un oscuro destino. Nacido del cadáver de una mujer ahorcada, su vida ha sido un
+                            solitario viaje entre conflicto y conflicto.</p>
+                        <button>Leer más</button>
+                    </div>
+                </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+
+        <div class="secciones">
+            <span class="material-symbols-outlined">stadia_controller</span>
+            <h2>Videojuegos</h2>
+            <div><hr></div>
+        </div>
+        <div class="container">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="img/eldenRing.jpg">
+                    <div class="descripcion">
+                        <h4>Elden Ring</h4>
+                        <p class="autor"><a>José Ángel Barrena</a> - 5 febrero 2024</p>
+                        <p>Elden Ring tiene lugar en las Tierras Intermedias, un continente ficticio gobernado por diferentes semidioses. Anteriormente estaba gobernado por la Reina Marika la Eterna, la cual actuaba como guardiana del Círculo de Elden.</p>
+                        <button>Leer más</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/godOfWar.jpg">
+                    <div class="descripcion">
+                        <h4>God of War</h4>
+                        <p class="autor"><a>José Ángel Barrena</a> - 5 febrero 2024</p>
+                        <p>Tras haberse cobrado su venganza contra su padre Zeus y los demás Dioses Olímpicos, el antiguo dios de la guerra, Kratos, ahora vive con su joven hijo Atreus en el mundo de los Dioses Nórdicos.</p>
+                        <button>Leer más</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/uncharted.jpg">
+                    <div class="descripcion">
+                        <h4>Uncharted</h4>
+                        <p class="autor"><a>José Ángel Barrena</a> - 5 febrero 2024</p>
+                        <p>Nathan Drake y su compañero Victor Sullivan se adentran en la peligrosa búsqueda del "mayor tesoro jamás encontrado". Al mismo tiempo, rastrean pistas que puedan conducir al hermano perdido de Drake.</p>
+                        <button>Leer más</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/xenoblade.jpg">
+                    <div class="descripcion">
+                        <h4>Xenoblade Chronicles 3</h4>
+                        <p class="autor"><a>José Ángel Barrena</a> - 5 febrero 2024</p>
+                        <p>Xenoblade Chronicles 3 tiene lugar en Aionios, donde dos naciones en guerra, Keves y Agnus, 
+                            se enfrentan en una guerra perpetua con soldados con una esperanza de vida de diez años. 
+                            </p>
+                        <button>Leer más</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/zelda.jpg">
+                    <div class="descripcion">
+                        <h4>The legend of Zelda Skyword Sword</h4>
+                        <p class="autor"><a>José Ángel Barrena</a> - 5 febrero 2024</p>
+                        <p>El jugador controla a Link, el cual se embarca en una misión para rescatar a su amiga, Zelda, quien ha sido secuestrada y llevada a las tierras inferiores. </p>
+                        <button>Leer más</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/blasphemous.jpg">
+                    <div class="descripcion">
+                        <h4>Blaspheamous</h4>
+                        <p class="autor"><a>José Ángel Barrena</a> - 5 febrero 2024</p>
+                        <p>Blasphemous es un videojuego de Metroidvania desarrollado por el estudio español The Game Kitchen, ​ y publicado por Team17.</p>
+                        <button>Leer más</button>
+                    </div>
+                </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+        <div id="publicidad">
+            <a href="https://tienda.cyberdark.net/" target="_blank" ><img src="img/publicidad1.png"></a>
+            <a href="https://www.normaeditorial.com/ficha/comic-europeo/blacksad/blacksad/blacksad-7-todo-cae-segunda-parte" target="_blank" ><img src="img/publicidad2.png"></a>
+        </div>
+    </section>
+    <footer>
+        <div class="elementosFooter">
+            <div id="logotipo">
+                <img src="img/logotipo.png" alt="Logotipo TOL">
+                <h2>TOL</h2>
+            </div>
+            <p>All content copyright © & Trademarked of their respective owners. All rights reserved.</p>
+        </div>
+        <div class="elementosFooter">
+            <p>Aviso legal</p>
+            <p>Privacidad y cookies</p>
+            <p>Condiciones generales</p>
+        </div>
+        <div class="elementosFooter">
+            <p>templeofleisure@gmail.com</p>
+            <p>Contacta</p>
+            <p>Síguenos</p>
+            <div>
+                <img src="img/twitterSVG.svg" alt="Twitter" class="icono">
+                <img src="img/instaSVG.svg" alt="Instagram" class="icono">
+                <img src="img/youtubeSVG.svg" alt="Youtube" class="icono">
+                <img src="img/tiktokSVG.svg" alt="Tiktok" class="icono">
+            </div>
+        </div>
+    </footer>
+    <!-- Scripts JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="js/scriptSlider.js"></script>
+    <script src="js/scriptHeader.js"></script>
+    <script src="js/scriptModoOscuro.js"></script>
+</body>
+</html>

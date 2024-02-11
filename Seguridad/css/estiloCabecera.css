@@ -1,0 +1,338 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+
+}
+
+#header {
+    display:flex;   
+    background:#88D4C2;
+    padding:8px;
+}
+
+a{
+    text-decoration:none;
+}
+
+header{
+    width:30%;
+
+}
+header a{
+    color:black;
+    text-align:left;
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    font-size:15px;
+    text-decoration:none;
+}
+
+header h1{
+    font-family: "Reggae One", system-ui;
+    font-weight: 300;
+    font-size:25px;
+    font-style: normal;
+}
+
+nav{
+    width:80%;
+}
+
+nav ul{
+    list-style:none;
+    background:#88D4C2;
+    text-align: center;  
+}
+
+nav ul li{
+    display:inline-block;
+    padding:20px;
+    transition: all ease-in-out 250ms;
+}
+
+ul li a{
+    font-family: "Poppins", sans-serif;
+    color:black;
+    text-decoration:none;
+}
+
+ul li a:hover{
+    color:white;
+}
+
+nav ul li:hover{
+    color: aliceblue;
+    background-color: black;
+    transition:0.5s;
+}
+
+.hide{
+    font-size:22px;
+    padding:16px;
+    background-color:#3AA088;
+    color:black;
+    cursor:pointer;
+    display:none;
+}
+
+@media only screen and (max-width:891px){
+    #header{
+        flex-direction: column;
+    }
+    header{
+        width:100%;
+        padding:40px;
+        color:black;
+        text-align:center;
+        background:#88D4C2;
+        display:flex;
+        flex-direction:row;
+        justify-content: center;
+        align-items: center;
+    }
+    ul li {
+        width:100%;
+        padding:16px;
+        text-align:left;
+    }
+
+    nav ul{
+        display:none;
+    }
+
+    .hide{
+        display:block;
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        font-size:40px;
+    }
+   
+    .esconder{
+        display:none;
+    }
+    #header{
+        padding:0px;
+
+    }
+    .esconder {
+        display: none;
+    }
+    
+    nav .esconder {
+        display: inline-block;
+    }
+
+
+}
+
+/* Estilo común para los apartados o secciones */
+.secciones{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top:2%;
+    margin-bottom:0.5%;
+}
+
+
+.secciones h2{
+    margin:auto;
+    padding:10px;
+    margin-left:10%;
+    font-size:28px;
+    font-family: "Be Vietnam Pro", sans-serif;
+    align-self:center;
+    width:400px;
+}
+
+button:hover{
+    background-color: #3AA088;
+}
+.secciones div{
+    padding:10px;
+    padding-right:10%;
+    width:100%;
+}
+
+.secciones hr{
+    width:100%;
+    border:1px solid #3AA088;
+}
+
+.seleccionado{
+    border-bottom:4px solid black;
+}
+
+/* Agrega estilos para el submenu */
+.submenu {
+    display: none;
+    position: absolute;
+    right:140px;
+    background-color: #88D4C2;
+    border: none;
+    padding: 8px;
+
+}
+
+.submenu input{
+    border-radius:10px;
+    width:300px;
+    padding:6px;
+
+}
+
+#sobre-nosotros:hover .submenu {
+    display: block;
+}
+
+#buscador:hover .submenu {
+    display: block;
+}
+
+/* Estilos para ocultar la ventana emergente */
+
+
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height:100%;
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+
+
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    height:70%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border:none;
+    border-radius:10px;
+    border-bottom:6px solid #88D4C2;
+}
+
+span{
+    align-self:flex-end;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#modal-registro {
+    display: none; 
+}
+
+form{
+    display:flex;
+    flex-direction: column;
+    width:50%;
+    justify-content: center;
+
+}
+
+.autor{
+    color:#66716E;
+    font-size:15px;
+}
+
+
+
+form button{
+    align-self:center;
+    width:80%;
+
+}
+
+form button:hover{
+    background-color: #3AA088;
+
+}
+.modal p{
+    margin-top:2%;
+    align-self:flex-start;
+}
+
+.modal p a{
+    color:#3AA088
+}
+.modal p a:hover{
+    font-weight:bold;
+}
+
+.modal {
+    z-index: 1000; 
+}
+
+
+form input{
+    padding:10px;
+
+}
+
+#modal-registro .modal-content {
+    width: 50%; 
+    height: 100%; 
+    margin: auto; 
+    overflow-y: auto;
+}
+
+#modal-login .modal-content {
+    width: 50%; 
+    height: 60%; 
+    margin-top: 10%; 
+    margin-bottom: 10%;
+    overflow-y: auto;
+}
+
+.checkbox{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    
+}
+
+.checkbox label {
+    width:90%;
+    margin-right:2%;
+    margin-left:3%;
+   
+
+}
+
+.checkbox input {
+    width:7%;
+}
+
+

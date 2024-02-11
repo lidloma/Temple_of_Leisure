@@ -1,0 +1,29 @@
+#contenedor404 {
+    display:flex;
+    margin-left:10%;
+    padding:100px;
+    margin-right:10%;
+}
+#contenedor404 div{
+    width:60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+    font-size:25px;
+
+}
+
+#contenedor404 div p a{
+    color:#2E806C;
+
+}
+#img404{
+    width:40%;
+}
+#contenedor404 div img {
+    width: 100%;
+    height: 100%;
+
+}
+

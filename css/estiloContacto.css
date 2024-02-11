@@ -1,0 +1,93 @@
+#contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+#contenedorForm {
+    width: 70%; 
+}
+
+#contenedorInfo {
+    display:flex;
+    width: 20%; 
+    flex-direction: column;
+    align-items:center;
+}
+
+form h3 {
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+form label {
+    margin-bottom: 10px;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.button {
+    width: 100%;
+    border:none;
+    font-size:20px;
+    background-color: #88D4C2;
+}
+
+.button:hover{
+    background-color: #3AA088;
+}
+
+h2 {
+    text-align: center;
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+#redes img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+/* Media queries para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    #contenedor {
+        flex-direction: column; /* Cambiado para que los elementos se apilen verticalmente */
+    }
+
+    #contenedorForm,
+    #contenedorInfo {
+        width: 100%; /* Cambiado para ocupar todo el ancho */
+    }
+
+    #contenedorInfo {
+        margin-top: 20px; /* Espaciado añadido entre contenedores */
+    }
+
+
+
+
+}
+#respuesta {
+    display: none;
+    margin-top: 20px;
+}
+#respuesta div {
+    text-align: center;
+}
+#respuesta img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+}
+#respuesta h2 {
+    color:#3AA088;
+}
+

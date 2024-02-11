@@ -1,0 +1,10 @@
+La página de error 404 sale cuando pulsas en "Sobre Nosotros" directamente.
+Para ver un ejemplo de reseña pulsar sobre "Leer más" en Nacidos de la Bruma 
+en la sección "Más recientes" o donde se haga referencia a ese libro (carrusel,
+página de búsqueda...).
+
+Hay dos pdfs adjuntos:
+    - En "validaciones-código-CSS_lidia_lopez" están todas las capturas de las validaciones requeridas 
+      para cada uno de los CSS de mi proyecto.
+    - En "variaciones-y-capturas_lidia_lopez" se encuentran las variaciones de diseño entre la guía de 
+      estilos y el resultado final entregado. También hay diferentes capturas del proyecto.

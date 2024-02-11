@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOL - Películas</title>        
+    <link rel="stylesheet" type="text/css" href="css/estiloBuscar.css">
+    <link rel="stylesheet" type="text/css" href="css/estiloCabecera.css">
+    <link rel="stylesheet" type="text/css" href="css/estiloFooter.css">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+    <!--Iconos-->
+    <!-- Menú hamburguesa de Font Awesome-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+    <!--Google Icons-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <!--Google Fonts-->
+    <!-- Fuente de Temple of Leisure - Reggae One-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&family=Reggae+One&display=swap" rel="stylesheet">
+
+    <!--Be Vietnam-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Revolution&family=Reggae+One&display=swap" rel="stylesheet">
+
+    <!--Poppins-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Revolution&family=Reggae+One&display=swap" rel="stylesheet">
+    
+    <!-- Carrusel -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+</head>
+<body>
+    <div id="header">
+        <header>
+            <a href="inicio.html">
+            <img src="img/logotipo.png">
+            <h1>TEMPLE OF LEISURE</h1> 
+            </a>    
+        </header>
+        <nav>
+            <ul>
+                <li><a href="buscar.html">Películas</a></li>
+                <li><a href="buscarSerie.html">Series</a></li>
+                <li><a href="buscarLibros.html">Libros</a></li>
+                <li><a class="seleccionado" href="#">Videojuegos</a></li>
+                <li><a  href="buscarComic.html">Cómics</a></li>
+            
+                <li id="sobre-nosotros"><a href="error404.html">Sobre Nosotros</a>
+                    <ul class="submenu">
+                        <li class="esconder"><a href="contacto.html">Contacto</a></li>
+                        <li class="esconder"><a href="sobreNosotros.html">¿Quiénes somos?</a></li>
+                    </ul>
+                </li>
+                <li id="buscador"><a class="esconder"><span class="material-symbols-outlined">
+                    search
+                    </span></a>
+                    <ul class="submenu">
+                        <li class="esconder"><input placeholder="Buscar..."></li>
+                    </ul>
+                </li>
+                <li><a id="perfil" class="esconder"><span class="material-symbols-outlined">
+                    account_circle
+                    </span></a></li>
+            </ul>
+        </nav>
+        <div class="hide">
+            <i class="fa fa-bars" id="menu" aria-hidden="true"></i>
+            <ul id="perfilYBuscador">
+                <li id="buscador"><a ><span class="material-symbols-outlined">search</span></a>
+                    <ul class="submenu">
+                        <li><input placeholder="Buscar..."></li>
+                    </ul>
+                </li>
+                <li><a id="perfil" ><span class="material-symbols-outlined">account_circle</span></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Ventana emergente de login -->
+    <div id="modal-login" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img src="img/logotipo.png" alt="Logotipo del sitio">
+            <form>
+                <input placeholder="Usuario"type="text" id="username" name="username" required>
+                <input placeholder="Contraseña" type="password" id="password" name="password" required>
+                <button type="submit">Iniciar sesión</button>
+            </form>
+            <p>¿No tienes una cuenta? <a id="registro-link">Regístrate aquí</a></p>
+            <p>¿Se te ha olvidado la contraseña?</p>
+        </div>
+    </div>
+
+    <!-- Ventana emergente de registro -->
+    <div id="modal-registro" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img src="img/logotipo.png" alt="Logotipo del sitio">
+            <form>
+                <input placeholder="Nombre" type="text" id="nombre" name="nombre" required>
+                
+                <input placeholder="Apellidos" type="text" id="apellidos" name="apellidos" required>
+                
+                <input placeholder="Correo electrónico" type="email" id="correo" name="correo" required>
+                
+                <input placeholder="Nombre de usuario" type="text" id="username-registro" name="username-registro" required>
+                
+                <input placeholder="Contraseña" type="password" id="password-registro" name="password-registro" required>
+                
+                <input placeholder="Confirmar contraseña"type="password" id="confirm-password" name="confirm-password" required>
+                <div class="checkbox">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">Acepto los términos y condiciones</label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <label for="newsletter">Suscribirse a la newsletter</label>
+                </div>
+                <button type="submit">Registrarse</button>
+                <p>¿Ya tienes una cuenta? <a id="login-link">Inicia sesión</a></p>
+            </form>
+        </div>
+    </div>
+
+    <section>
+        <div id="titulo">
+            <span class="material-symbols-outlined">stadia_controller</span>
+            <h2>VIDEOJUEGOS</h2>
+          
+        </div>
+        <div id="principal">
+            <div id="resultados">
+                <div class="resultadoBus">
+                    <div class="contenidoBus">
+                        <h3>Elden Ring</h3>
+                        <p class="autor"><a>José Ángel Barrena</a> - 5 febrero 2024</p>
+                        <p>Elden Ring tiene lugar en las Tierras Intermedias, un continente ficticio gobernado por diferentes semidioses. Anteriormente estaba gobernado por la Reina Marika la Eterna, la cual actuaba como guardiana del Círculo de Elden, una poderosa fuerza que se manifiesta como el concepto físico del orden.
+                        </p>
+                        <button>Leer más</button>
+                    </div>
+                    <img src="img/eldenRing.jpg">
+                </div>
+                <div  class="resultadoBus">
+                    <div class="contenidoBus">
+                        <h3>Uncharted</h3>
+                        <p class="autor"><a>José Ángel Barrena</a> - 5 febrero 2024</p>
+                        <p>Nathan Drake y su compañero Victor Sullivan se adentran en la peligrosa búsqueda del "mayor tesoro jamás encontrado". Al mismo tiempo, rastrean pistas que puedan conducir al hermano perdido de Drake.</p>
+                        <button>Leer más</button>
+                    </div>
+                    <img src="img/uncharted.jpg">
+                </div>
+                <div class="resultadoBus">
+                    <div class="contenidoBus">
+                        <h3>The legend of Zelda: Skyword Sword</h3>
+                        <p class="autor"><a>José Ángel Barrena</a> - 5 febrero 2024</p>
+                        <p>El jugador controla a Link, el cual se embarca en una misión para rescatar a su amiga, Zelda, quien ha sido secuestrada y llevada a las tierras inferiores.
+                        </p>
+                        <button>Leer más</button>
+                    </div>
+                    <img src="img/zelda.jpg">
+                </div>
+                <div class="resultadoBus">
+                    <div class="contenidoBus">
+                        <h3>Xenoblade 3</h3>
+                        <p class="autor"><a>José Ángel Barrena</a> - 5 febrero 2024</p>
+                        <p>Nos cuenta la épica historia de ciencia ficción protagonizada por Noah, Mio y sus amigos, en un planeta lejano en el que tendrán que enfrentarse a numerosas amenazas.</p>
+                        <button>Leer más</button>
+                    </div>
+                    <img src="img/xenoblade.jpg">
+                </div>
+                <div class="resultadoBus">
+                    <div class="contenidoBus">
+                        <h3>Blaspheamous</h3>
+                        <p class="autor"><a>José Ángel Barrena</a> - 5 febrero 2024</p>
+                        <p>Explora este mundo terrorífico y su religión retorcida y descubre los secretos que aguardan escondidos. Realiza combos devastadores y ejecuciones brutales para castigar a las hordas de monstruos grotescos y jefes titánicos dispuestos a desgarrarte en mil pedazos.</p>
+                        <button>Leer más</button>
+                    </div>
+                    <img src="img/blasphemous.jpg">
+                </div>
+                <div class="publi">
+                    <div id="cambiarPagina">
+                        <button>1</button>
+                        <button>2</button>
+                        <button>3</button>
+                    </div>
+                    <div id="publicidad">
+                        <img src="img/publicidad1.png">
+                        <img src="img/publicidad2.png">
+                    </div>
+                </div>
+            </div>
+            <div id="aside">
+                <div id="seccionFiltro">
+                    <h3>Filtros</h3>
+                    <div>
+                        <h4>Plataforma</h4>
+                        <input type="checkbox" id="enCines" name="enCines" value="enCines">
+                        <label for="enCines"> En cines</label><br>
+                        <input type="checkbox" id="netflix" name="netflix" value="netflix">
+                        <label for="netflix">Netflix</label><br>
+                        <input type="checkbox" id="primeVideo" name="primeVideo" value="primeVideo">
+                        <label for="primeVideo">Prime Video</label><br>
+                        <input type="checkbox" id="hbo" name="hbo" value="hbo">
+                        <label for="hbo">HBO</label><br>
+                        <input type="checkbox" id="disney+" name="disney+" value="disney+">
+                        <label for="disney+">Disney+</label><br>
+                        <input type="checkbox" id="otros" name="otros" value="otros">
+                        <label for="otro">Otros</label><br>
+                        <h4>Género</h4>
+                        <input type="checkbox" id="musical" name="musical" value="musical">
+                        <label for="musical"> Musical</label><br>
+                        <input type="checkbox" id="fantasia" name="fantasia" value="fantasia">
+                        <label for="fantasia">Fantasía</label><br>
+                        <input type="checkbox" id="animacion" name="animacion" value="animacion">
+                        <label for="animacion">Animación</label><br>
+                        <input type="checkbox" id="policiaca" name="policiaca" value="policiaca">
+                        <label for="policiaca">Policíaca</label><br>
+                        <input type="checkbox" id="suspense" name="suspense" value="suspense">
+                        <label for="suspense">Policíaca</label><br>
+                        <input type="checkbox" id="suspense" name="suspense" value="suspense">
+                        <label for="suspense">Suspense</label><br>
+                        <input type="checkbox" id="miedo" name="miedo" value="miedo">
+                        <label for="miedo">Miedo</label><br>
+                        <input type="checkbox" id="romance" name="romance" value="romance">
+                        <label for="romance">Romance</label><br>
+                        <h4>Fecha</h4>
+                        <input type="checkbox" id="masReciente" name="masReciente" value="masReciente">
+                        <label for="masReciente">Más reciente</label><br>
+                        <input type="checkbox" id="menosReciente" name="menosReciente" value="menosReciente">
+                        <label for="menosReciente">Menos reciente</label><br>
+                        <h4>Popularidad</h4>
+                        <input type="checkbox" id="masPopular" name="masPopular" value="masPopular">
+                        <label for="masPopular">Más popular</label><br>
+                        <input type="checkbox" id="menosPopular" name="menosPopular" value="menosPopular">
+                        <label for="menosPopular">Menos popular</label><br>  
+                    </div>
+                </div>
+                <div id="tendencias">
+                    <h3>Tendencias</h3>
+                    <hr>
+                    <p>1. Scott Pilgrim</p>
+                    <hr>
+                    <p>2. Alas de sangre</p>
+                    <hr>
+                    <p>3. Jujutsu Kaisen</p>
+                    <hr>
+                    <p>4. Wish</p>
+                    <hr>
+                    <p>5. FNAF</p>
+                    <hr>
+                    <p>6. GOTY</p>
+                    <hr>
+                    <a><img src="img/anuncioC1.png"></a>
+                    <a><img src="img/anuncioC2.png"></a>
+                    <a><img src="img/anuncioC3.png"></a>
+                    <div id="redes">
+                        <img src="img/insta.png">
+                        <img src="img/youtube.png">
+                        <img src="img/twitter.png">
+                        <img src="img/tiktok.png">
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="js/scriptHeader.js"></script>
+
+    <footer>
+        <div class="elementosFooter">
+            <div id="logotipo">
+                <img src="img/logotipo.png" alt="Logotipo TOL">
+                <h2>TOL</h2>
+            </div>
+            <p>All content copyright © & Trademarked of their respective owners. All rights reserved.</p>
+        </div>
+        <div class="elementosFooter">
+            <p>Aviso legal</p>
+            <p>Privacidad y cookies</p>
+            <p>Condiciones generales</p>
+        </div>
+        <div class="elementosFooter">
+            <p>templeofleisure@gmail.com</p>
+            <p>Contacta</p>
+            <p>Síguenos</p>
+            <div>
+                <img src="img/youtube.png" alt="">
+                <img src="img/insta.png" alt="">
+                <img src="img/twitter.png" alt="">
+                <img src="img/tiktok.png" alt="">
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
